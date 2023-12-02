@@ -1,8 +1,7 @@
 module Main (main) where
 
-import Lib
-import Day1 (day1)
--- import Day2 (day2)
+-- import Day1 (day1)
+import Day2 (day2)
 -- import Day3 (day3)
 -- import Day4 (day4)
 -- import Day5 (day5)
@@ -20,6 +19,12 @@ import Day1 (day1)
 -- import Day17 (day17)
 -- import Day18 (day18)
 -- import Day19 (day19)
+-- import Day20 (day20)
+-- import Day21 (day21)
+-- import Day22 (day22)
+-- import Day23 (day23)
+-- import Day24 (day24)
+-- import Day25 (day25)
 
 main :: IO ()
-main = day1
+main = day2
