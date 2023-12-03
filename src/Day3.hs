@@ -16,7 +16,7 @@ type Number = ([Coordinate], Int)
 type GearRatio = Int
 
 parseGrid :: [String] -> Grid
-parseGrid xss = Map.fromList $ concatMap ( \ y -> map ( \yy -> ((fst yy, fst y), snd yy)) (snd y)) $ zip [0..] (map (zip [0..]) xss)
+parseGrid css = Map.fromList [((x, y), c) | (y, cs) <- zip [0..] css, (x, c) <- zip [0..] cs]
 
 parseNumbers :: [String] -> [Number]
 parseNumbers xss = concatMap ( \ (y, xs) -> nos [] [] 0 y xs) $ zip [0..] xss
