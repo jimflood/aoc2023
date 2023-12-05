@@ -7,3 +7,4 @@ The puzzles are [here!](https://adventofcode.com/2023).
 * Day 2: [Cube Conundrum](https://github.com/jimflood/aoc2023/blob/main/src/Day2.hs)
 * Day 3: [Gear Ratios](https://github.com/jimflood/aoc2023/blob/main/src/Day3.hs)
 * Day 4: [Scratchcards](https://github.com/jimflood/aoc2023/blob/main/src/Day4.hs)
+* Day 5: [If You Give A Seed A Fertilizer](https://github.com/jimflood/aoc2023/blob/main/src/Day5.hs)
