@@ -7,8 +7,8 @@ module Main (main) where
 -- import Day5 (day5)
 -- import Day6 (day6)
 -- import Day7 (day7)
-import Day8 (day8)
--- import Day9 (day9)
+-- import Day8 (day8)
+import Day9 (day9)
 -- import Day10 (day10)
 -- import Day11 (day11)
 -- import Day12 (day12)
@@ -27,4 +27,4 @@ import Day8 (day8)
 -- import Day25 (day25)
 
 main :: IO ()
-main = day8
+main = day9
