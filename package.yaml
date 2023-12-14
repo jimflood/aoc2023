@@ -23,6 +23,7 @@ dependencies:
 - base >= 4.7 && < 5
 - containers >= 0.5.7 && < 6
 - split
+- parallel
 
 ghc-options:
 - -Wall
