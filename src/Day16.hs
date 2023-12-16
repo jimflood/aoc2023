@@ -30,10 +30,10 @@ energize (_, m) x = energize' (Map.empty, [x])
             | otherwise = energize' (e, bs) -- beam has left the grid
             where
                 energize'' :: (Maybe Int, Energy) -> Char -> Energy
-                energize'' (Nothing, ee) tile = energize' (ee, f b tile ++ bs)
+                energize'' (Nothing, ee) tile = energize' (ee, map step (f b tile) ++ bs)
                     where
                         f
-                            | tile == '.' = \ b _ -> [step b]
+                            | tile == '.' = \ b _ -> [b]
                             | tile `elem` "\\/" = reflect
                             | tile `elem` "|-" = split
                             | otherwise = error "Kaboom!"
@@ -46,23 +46,23 @@ step ((x, y), East) = ((x + 1, y), East)
 step ((x, y), West) = ((x - 1, y), West)
 
 reflect :: Beam -> Char -> [Beam]
-reflect (p, North) '/' = [step (p, East)]
-reflect (p, South) '/' = [step (p, West)]
-reflect (p, East) '/' = [step (p, North)]
-reflect (p, West) '/' = [step (p, South)]
-reflect (p, North) '\\' = [step (p, West)]
-reflect (p, South) '\\' = [step (p, East)]
-reflect (p, East) '\\' = [step (p, South)]
-reflect (p, West) '\\' = [step (p, North)]
+reflect (p, North) '/' = [(p, East)]
+reflect (p, South) '/' = [(p, West)]
+reflect (p, East) '/' = [(p, North)]
+reflect (p, West) '/' = [(p, South)]
+reflect (p, North) '\\' = [(p, West)]
+reflect (p, South) '\\' = [(p, East)]
+reflect (p, East) '\\' = [(p, South)]
+reflect (p, West) '\\' = [(p, North)]
 reflect _ _ = error "???"
 
 split :: Beam -> Char -> [Beam]
-split (p, North) '|' = [step (p, North)]
-split (p, South) '|' = [step (p, South)]
-split (p, _) '|' = [step (p, North), step (p, South)]
-split (p, East) '-' = [step (p, East)]
-split (p, West) '-' = [step (p, West)]
-split (p, _) '-' = [step (p, East), step (p, West)]
+split (p, North) '|' = [(p, North)]
+split (p, South) '|' = [(p, South)]
+split (p, _) '|' = [(p, North), (p, South)]
+split (p, East) '-' = [(p, East)]
+split (p, West) '-' = [(p, West)]
+split (p, _) '-' = [(p, East), (p, West)]
 split _ _ = error "???"
 
 candidates :: Grid -> [Beam]
