@@ -54,10 +54,10 @@ corners dis = corners' ([last dis] ++ dis ++ [head dis])
         delta DigUp DigLeft DigDown = \ (x, y) n -> (x - n + 1, y)
         delta DigDown DigRight DigUp = \ (x, y) n -> (x + n - 1, y)
         -- Zig-Zag = 0
-        delta a DigRight c | a == c = \ (x, y) n -> (x + n, y)
-        delta a DigLeft c | a == c = \ (x, y) n -> (x - n, y)
-        delta a DigUp c | a == c = \ (x, y) n -> (x, y - n)
-        delta a DigDown c | a == c = \ (x, y) n -> (x, y + n)
+        delta a DigRight c | a == c && a /= DigRight = \ (x, y) n -> (x + n, y)
+        delta a DigLeft c | a == c && a /= DigLeft = \ (x, y) n -> (x - n, y)
+        delta a DigUp c | a == c && a /= DigUp = \ (x, y) n -> (x, y - n)
+        delta a DigDown c | a == c && a /= DigDown = \ (x, y) n -> (x, y + n)
         delta i j k = error ("Cannot occur: " ++ show i ++ " " ++ show j ++ " " ++ show k)
 
 -- Calculate vertices of polygon, then area of that polygon.
