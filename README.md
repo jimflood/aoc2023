@@ -23,8 +23,8 @@ The puzzles are [here!](https://adventofcode.com/2023)
 * Day 18: [Lavaduct Lagoon](https://github.com/jimflood/aoc2023/blob/main/src/Day18.hs)
 * ~~Day 19: [Aplenty](https://github.com/jimflood/aoc2023/blob/main/src/Day18.hs)~~ cleaning up source (both parts solved)
 * ~~Day 20: [Pulse Propagation](https://github.com/jimflood/aoc2023/blob/main/src/Day20.hs)~~ cleaning up source (both parts solved)
-* ~~Day 21: [Step Counter](https://github.com/jimflood/aoc2023/blob/main/src/Day21.hs)~~ working on part 2
+* ~~Day 21: [Step Counter](https://github.com/jimflood/aoc2023/blob/main/src/Day21.hs)~~ cleaning up source (both parts solved)
 * Day 22: [Sand Slabs](https://github.com/jimflood/aoc2023/blob/main/src/Day22.hs)
-* ~~Day 23: [???](https://github.com/jimflood/aoc2023/blob/main/src/Day23.hs)~~ not yet
-* ~~Day 24: [???](https://github.com/jimflood/aoc2023/blob/main/src/Day24.hs)~~ not yet
-* ~~Day 25: [???](https://github.com/jimflood/aoc2023/blob/main/src/Day25.hs)~~ not yet
+* ~~Day 23: [A Long Walk](https://github.com/jimflood/aoc2023/blob/main/src/Day23.hs)~~ cleaning up source (both parts solved)
+* ~~Day 24: [Never Tell Me The Odds](https://github.com/jimflood/aoc2023/blob/main/src/Day24.hs)~~ working on part 2
+* Day 25: [Snowverload](https://github.com/jimflood/aoc2023/blob/main/src/Day25.hs)
